@@ -12,7 +12,7 @@ function App() {
   const [text, setText] = useState("");
 
   //This function needs to get the input and add to list
-  function handleChange(){
+  function handleChange(newText){
 setText(text+Input.value)
 console.log(Input.value)
   }

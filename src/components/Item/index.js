@@ -1,7 +1,8 @@
 import React from "react";
 
-function Item(){
-    return <li></li>
+function Item({text}){
+    console.log(text)
+    return <li>{text}</li>
 };
 
 export default Item;

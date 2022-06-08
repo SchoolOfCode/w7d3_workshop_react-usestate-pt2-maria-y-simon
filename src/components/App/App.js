@@ -9,21 +9,29 @@ import Input from "../Input";
 // and add this text into the li -> Item
 // 
 function App() {
-  const [text, setText] = useState("");
+  const [inputText, setInputText] = useState("");
 
   //This function needs to get the input and add to list
-  function handleChange(newText){
-setText(text+Input.value)
-console.log(Input.value)
+  function handleChange(event){
+    const newInput = event.target.value
+    setInputText(newInput);
+    console.log(newInput);
   }
+
+//   const getInputValue = (event)=>{
+//     // show the user input value to console
+//     const userValue = event.target.value;
+
+//     console.log(userValue);
+// };
 
 
   return (
     <div className="App">
       <h1>JSX will go here!</h1>
-      <Input value={newText} onChange={function(){handleChange(newText)}}/>
+      <Input onChange={function(){handleChange()}}/>
 
-      <Item/>
+      <Item text={inputText} />
 
     </div>
   );
